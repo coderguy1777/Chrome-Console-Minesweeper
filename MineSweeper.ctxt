@@ -3,5 +3,5 @@ comment0.target=MineSweeper
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
 comment2.params=
-comment2.target=int\ BoardInputter()
+comment2.target=void\ BoardPrinter()
 numComments=3
