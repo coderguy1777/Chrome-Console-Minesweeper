@@ -25,6 +25,7 @@ public class MineSweeper {
         String Answer = scan.nextLine();
         if(Answer.equals("Y")) {
             System.out.println("Alright Lets begin!");
+            System.out.println("----------------------------------------------------------------------");
             Rules();
         }
         if(Answer.equals("N")) {
@@ -39,8 +40,8 @@ public class MineSweeper {
             System.out.println();
             for(int Columnamount = 0; Columnamount < 12; ++Columnamount) 
                 System.out.print(Board[Rowamount][Columnamount] + "|" );
-                System.out.println();
-            
+            System.out.println();
+
         }
     }
 
@@ -61,7 +62,7 @@ public class MineSweeper {
         System.out.println("--------------------------------------------------------------------------------------------------------------------");
         String Answer = scan.next();
         if(Answer.equals("Y")) {
-            System.out.println("The Game Shall Continue Now, Enjoy.");
+            System.out.println("The Game Shall Continue Now, Enjoy.");      
             gamestart();
         }
         if(Answer.equals("N")) {
@@ -75,6 +76,33 @@ public class MineSweeper {
             Scanner scan;
             BoardPrinter();
             break;
+        }
+    }
+
+    public static void PlayerNumberRange() {
+        Scanner scan;
+        scan = new Scanner(System.in);
+        int Arrayspot1 = scan.nextInt();
+        int Arrayspot2 = scan.nextInt();
+        System.out.println("Ok, Please type the range of Numbers, two numbers, min and max, you would like the number blocks to be, have it be less than or equal to 100.");
+        if(Arrayspot1 <= 100 && Arrayspot2 <= 100) {
+            System.out.println("You have typed" + " " + Arrayspot1 + " " + "as your minimum," + " " + "and as your maximum you typed" + " " + Arrayspot2);
+            System.out.println("-----------------------------------------------------------------------------------------------------------------------");
+            System.out.println("Now, please type Y or N to confirm this number range.");
+            String Answer = scan.next();
+            if(Answer.equals("Y")) {
+                System.out.println("Confirmed Number range");
+                boolean range = true;
+                gamestart();
+            }
+            if(Answer.equals("N")) {
+                System.out.println("Sorry for the Error, since i can't code a function like it, please restart the program and come back here and type another Range.");
+                boolean range = false;
+                while(range = false || Answer.equals("N")) {
+                    System.out.println("The Program has ended due to a mathematical error, you will have to restart the entire program.");
+                    break;
+                }
+            }
         }
     }
 }
