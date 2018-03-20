@@ -1,3 +1,9 @@
+/*
+ * A Program that Plays Minesweeper, the Array can be modified in the start with the static ints for the Columnamount and Rowamount.
+ * Of course, The game is single player,and cannot be played with two.
+ * By @Jordan Hill
+ * Idk why I'm even javadoccing this, but hey, it look
+ */
 import java.util.Scanner;
 import java.io.*;
 import java.util.*;
