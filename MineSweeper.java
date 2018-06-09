@@ -2,7 +2,7 @@
  * A Program that Plays Minesweeper, the Array can be modified in the start with the static ints for the Columnamount and Rowamount.
  * Of course, The game is single player,and cannot be played with two.
  * By @Jordan Hill
- * Idk why I'm even javadoccing this, but hey, it look
+ * Idk why I'm even javadocing this, but hey, it looks good.
  */
 import java.util.Scanner;
 import java.io.*;
@@ -41,7 +41,21 @@ public class MineSweeper {
             for(int Columnamount = 0; Columnamount < 12; ++Columnamount) 
                 System.out.print(Board[Rowamount][Columnamount] + "|" );
             System.out.println();
+        }
+    }
 
+    public void playerMoves() {
+        Scanner scan;
+        scan = new Scanner(System.in);
+        boolean turn = true;
+        while(turn = true) {
+            boolean Player1turn = true;
+            int Space;
+            int Mine;
+            if(Player1turn = true) {
+                int[][]Board = new int[Rowamount + 1][Columnamount];
+
+            }
         }
     }
 
@@ -93,16 +107,36 @@ public class MineSweeper {
             if(Answer.equals("Y")) {
                 System.out.println("Confirmed Number range");
                 boolean range = true;
-                gamestart();
-            }
-            if(Answer.equals("N")) {
-                System.out.println("Sorry for the Error, since i can't code a function like it, please restart the program and come back here and type another Range.");
-                boolean range = false;
-                while(range = false || Answer.equals("N")) {
-                    System.out.println("The Program has ended due to a mathematical error, you will have to restart the entire program.");
-                    break;
+                while(range = true) {
+                    gamestart();
+                }
+                if(Answer.equals("N")) {
+                    System.out.println("Sorry for the Error, since i can't code a function like it, please restart the program and come back here and type another Range.");
+                    while(range = false || Answer.equals("N")) {
+                        System.out.println("The Program has ended due to a mathematical error, you will have to restart the entire program.");
+                        break;
+                    }
                 }
             }
+            boolean range = true;
         }
+    }
+
+    private int gamescore() {
+        int bomb = 0;
+        int number = 1;
+        int death;
+        int space1 = 1;
+        int space2 = 2;
+        int space3 = 3;
+        int space4 = 4;
+        int space5 = 5;
+        boolean validspace;
+        String BoardSpace = " ";
+        String Bomb = "*";
+        int[][]Board = new int [Rowamount][Columnamount];
+        for(int i = 0; i < Board.length;i++) {
+        }
+        return number;
     }
 }
