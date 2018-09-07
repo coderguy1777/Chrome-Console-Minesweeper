@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MineSweeper</title>
+	<style>
+	body{background-color: #607d8b}
+	</style>
+</head>
+<body>
+	<div id=control></div>
+		<label>Rows<input type=text name="row" id="input-rows" value="8"/></label>
+		<label>Columns<input type=text name="cols" id="input-cols" value="8"/></label>
+		<label>Bombs<input type=text name="bombs" id="input-bombs" value="4"/></label>
+		<input type=button value="Generate/Reset" onClick="createGame()">
+	<div id=ui></div>
+	<script type ="text/javascript">
+		function byId(id) {
+			return document.getElementByID(id);00
+		}
+		function createGame(){
+			var rows = byId('input-rows').value,
+				cols = byId('input-cols').value,
+				bombs = byId('input-bombs').value;
+			try{
+				currentGame = new MineSweeper(byId('ui'), rows, cols, bombs);
+			}catch(e){
+				alert("Game Creation did work due to unknown reasons, Here's an attempt at an explanation:" + e.message);
+			}
+		}
+	<script>
+	
+	var MineSweeper = (function(w,d) {
+		var FIELDS = {
+		EMPTY: ' ',
+		BOMB: '@',
+		NUMBER: '9'
+	}
+	
+	<script>
+		var MAX_ROWS = 64;
+		var MAX_COLS = 64;
+		function MineSweeper(ui, rows, cols, bombs) {
+			if(!(ui instanceof HTMLElement)){
+				throw new Exception('View did not render or is missing from the code, fix it please. ');
+			};
+			
+			this.board = [];
+			r*c/b < 0.5*r*c
+			this.bombs = parseInt(bombs, 10)?;
+			this.rows = parseInt(rows,10) > MAX_ROWS ? MAX_ROWS : parseInt(rows,10);
+			this.cols = parseInt(cols, 10) > MAX_COLS ? MAX_COLS : parseInt(cols, 10);
+			
+			this.initializeBoard();
+			this.createBoard();
+			this.attachEvents();
+			this.renderBoard();
+			
+		}
+		
+		MineSweeper.prototype.initializeBoard = function() {
+			
+		};
+		MineSweeper.prototype.createBoard = function() {};
+		MineSweeper.prototype.attachEvents = function() {};
+		MineSweeper.prototype.renderBoard = function() {};
+		
+		return MineSweeper;
+		})(window, document);
+	</script>
+</body>
